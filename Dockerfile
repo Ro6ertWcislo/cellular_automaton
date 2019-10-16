@@ -17,7 +17,11 @@ USER root
 RUN apt-get update && apt-get install -yq --no-install-recommends \
 	xvfb \
 	x11vnc \
+	git \
 	&& rm -rf /var/lib/apt/lists/*
+
+
+RUN git clone https://github.com/Ro6ertWcislo/cellular_automaton
 
 RUN fix-permissions /etc/jupyter/
 
